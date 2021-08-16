@@ -9,18 +9,7 @@ package com.bridgelabz;
  * @since 16/08/2021
  */
 public class MaxOf3Integers {
-    // used Integer object and compareTo To test MaximumNumber
-    public static Integer compareIntegerMaximum(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
-        Integer maximumNumber = firstNumber;
-        if (secondNumber.compareTo(maximumNumber)>0)
-            maximumNumber = secondNumber;
-        if (thirdNumber.compareTo(maximumNumber)>0)
-            maximumNumber = thirdNumber;
-        return maximumNumber;
-    }
-    //declered MAin Method
     public static void main(String[] args) {
-        System.out.printf("the Maximum value of three Integers :\n " +compareIntegerMaximum(55,40,50));
+        System.out.printf("Welcome to Generics Method Programming");
     }
-
 }
