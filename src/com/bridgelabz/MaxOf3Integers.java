@@ -10,6 +10,6 @@ package com.bridgelabz;
  */
 public class MaxOf3Integers {
     public static void main(String[] args) {
-        System.out.printf("Welcome to Generics Method Programming");
+        System.out.printf("Welcome to Generics Method Programming ..");
     }
 }
