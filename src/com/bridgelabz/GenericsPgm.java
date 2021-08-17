@@ -9,22 +9,37 @@ package com.bridgelabz;
  * @version 16.0
  * @since 16/08/2021
  */
-public class GenericsPgm {
-    // used Integer object and compareTo To test Maximum String
-    public static String campareStringMaximum(String firstWord, String secWord, String thirdWord) {
-        String maximumString = firstWord;
-        if (secWord.compareTo(maximumString) > 0)
-            maximumString = secWord;
-        if (thirdWord.compareTo(maximumString) > 0)
-            maximumString = thirdWord;
-        return maximumString;
+public class GenericsPgm<E extends Comparable> {
+    E first, second, third;
+
+    public GenericsPgm(E first, E second, E third) {
+        this.first = first;
+        this.second = second;
+        this.third = third;
+    }
+
+    //conditon to calculate the maximum value
+    public static <E extends Comparable> E compareMaximum(E firstOne, E secOne, E thirdOne) {
+        E maximumNumber = firstOne;
+        if (secOne.compareTo(maximumNumber) > 0)
+            maximumNumber = secOne;
+        if (secOne.compareTo(maximumNumber) > 0)
+            maximumNumber = thirdOne;
+        return maximumNumber;
     }
 
     /**
-     * declaring the main method to call another class
+     * declaring the main method
+     * printing the maximum value of Integer
+     * printing the maximum value of Float
+     * printing the maximum value of String
      */
     public static void main(String[] args) {
-        System.out.printf("Welcome to Generics Method Programming ..");
-        System.out.printf("\n the Maximum value of three Integers : " + campareStringMaximum("leoMessi", "zlatanIbrahimovic", "aguera"));
+        System.out.println("The maximum of three Integers : "
+                + compareMaximum(Integer.valueOf(30), Integer.valueOf(40), Integer.valueOf(55)));
+        System.out.println("The maximum of three Float Values : "
+                + compareMaximum(Float.valueOf(22.43f), Float.valueOf(23.12f), Float.valueOf(43.34f)));
+        System.out.println("The Maximum of three String Values :"
+        +compareMaximum("Sunil","abcd","xyz"));
     }
 }
