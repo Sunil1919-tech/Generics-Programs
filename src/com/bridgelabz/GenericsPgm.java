@@ -36,10 +36,10 @@ public class GenericsPgm<E extends Comparable> {
      */
     public static void main(String[] args) {
         System.out.println("The maximum of three Integers : "
-                + compareMaximum(Integer.valueOf(30), Integer.valueOf(40), Integer.valueOf(55)));
+                + compareMaximum(Integer.valueOf(99), Integer.valueOf(45), Integer.valueOf(55)));
         System.out.println("The maximum of three Float Values : "
-                + compareMaximum(Float.valueOf(22.43f), Float.valueOf(23.12f), Float.valueOf(43.34f)));
+                + compareMaximum(Float.valueOf(61.43f), Float.valueOf(23.12f), Float.valueOf(43.34f)));
         System.out.println("The Maximum of three String Values :"
-        +compareMaximum("Sunil","abcd","xyz"));
+        +compareMaximum("Sunil","leomessi","latanibrah"));
     }
 }
