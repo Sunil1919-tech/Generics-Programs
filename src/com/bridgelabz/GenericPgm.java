@@ -1,17 +1,25 @@
 package com.bridgelabz;
 
+import java.util.EmptyStackException;
+
 /**
  * purpose - To simulate Generics Method
- * MaxOf#Integers implements an application that
- * generates max. of three Integer value
- *
+ * GenericsPgm implements an application that
+ * generates max. of three variables value
+ * Using Generic class
  * @author Sunil
  * @version 16.0
  * @since 16/08/2021
  */
-public class GenericPgm {
+public class GenericPgm <E extends Comparable<E>>{
+    E firstOne,secOne,thirdOne;
+    public GenericPgm(E first,E second, E third){
+        this.firstOne=first;
+        this.secOne=second;
+        this.thirdOne=third;
+    }
     /**
-     * comapring three variable values using Generic Method
+     * comapring three variable values using Generic class
      *
      * @param firstOne first parameter
      * @param secOne   second parameter
@@ -36,9 +44,9 @@ public class GenericPgm {
         System.out.println("Welcome to Generics Method Programing");
         Integer num1 = 33, num2 = 56, num3 = 39;
         System.out.println("the maximum value of three Integer Variables :" + compareMaximum(num1, num2, num3));
-        Float f1 = 23.435f, f2 = 76.54f, f3 = 55.12f;
+        Float f1 = 23.435f, f2 =43.98f , f3 = 76.54f;
         System.out.println("the maximum value of three Float Variables :" + compareMaximum(f1, f2, f3));
-        String name1 = "leoMessi", name2 = "zlatanIbrah", name3 = "aguera";
+        String name1 = "zlatanIbrah", name2 = "leoMessi", name3 = "aguera";
         System.out.println("the maximum value of three String Variables :" + compareMaximum(name1, name2, name3));
     }
 }
